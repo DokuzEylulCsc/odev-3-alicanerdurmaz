@@ -1,5 +1,11 @@
+#### Kaynakça
+
+- [Nodejs API Docs](https://nodejs.org/api/fs.html)
+- [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
 # Ödev3(Son Teslim Tarihi:02.01.2020)
-Bu ödevde belirli bir cevap anahtarına göre bir sınıfın test sınavının cevaplarını otomatik olarak değerlendiren bir program yazmanız istenmektedir. Kodlamayı sadece C++ veya JavaScript dillerinden biriyle yapmanız beklenmektedir. Programınız girdi ve çıktı işlemlerini metin dosyaları üzerinden gerçekleştirecektir. 
+
+Bu ödevde belirli bir cevap anahtarına göre bir sınıfın test sınavının cevaplarını otomatik olarak değerlendiren bir program yazmanız istenmektedir. Kodlamayı sadece C++ veya JavaScript dillerinden biriyle yapmanız beklenmektedir. Programınız girdi ve çıktı işlemlerini metin dosyaları üzerinden gerçekleştirecektir.
 Programınız alacağı girdi dosyasının ilk satırında sınavdaki toplam soru sayısı olacaktır. İkinci satırında ise sınavın cevap anahtarı bulunacaktır. Buradan sonraki satırlar ise her bir öğrencinin cevaplarını temsil edecektir. Satırın başındaki ilk değer, cevabı okunan öğrencinin numarası olacaktır. Sonrasında ise satır sonuna kadar öğrencinin cevapları olacaktır. Öğrenci boş cevap da vermiş olabilir. Örnek bir girdiyi aşağıda görebilirsiniz:
 
 10
@@ -10,18 +16,19 @@ NA0000027,B,A,D,D,,B,,A,C,B
 N00000035,B,A,C,D,B,B,,A,C,
 
 Yukarıda verilen girdi dosyası (input.txt) değerlendirilirken;
--	Her doğru cevap için +4 puan
--	Her boş cevap için +0 puan
--	Her yanlış cevap için -1 puan
+
+- Her doğru cevap için +4 puan
+- Her boş cevap için +0 puan
+- Her yanlış cevap için -1 puan
 
 olacak şekilde tüm öğrenciler puanlanacaktır. Herhangi bir sınıfın maksimum öğrenci sayısı 100 olacaktır. Değerlendirme sırasında bir öğrencinin sınavdan aldığı toplam puanı 0’in altına inerse bu puan 0 olarak kabul edilecektir. Her bir öğrenciye ait sınav puanları bulunduktan sonra alına bilinecek en yüksek not (yukarıdaki 10 sorulu sınav örneği için 40 puan) 100 olacak şekilde, tüm öğrencilerin notları [0,100] aralığına normalize edilecektir. Sonrasında ise tüm öğrencilerin notları en yüksek notan en düşük nota doğru sıralı olacak şekilde ve en son satırda ise sırası ile:
 
--	En düşük not
--	En yüksek not
--	Ortalama
--	Medyan
--	Açıklık (range)
-bilgilerinden oluşan bir çıktı dosyası (output.txt) hazırlanacaktır.
+- En düşük not
+- En yüksek not
+- Ortalama
+- Medyan
+- Açıklık (range)
+  bilgilerinden oluşan bir çıktı dosyası (output.txt) hazırlanacaktır.
 
 Yukarıda örnek girdi dosyası olarak verilen, örneğe ait örnek çıktı dosyası aşağıdaki gibi olmalıdır:
 N00000023,32
