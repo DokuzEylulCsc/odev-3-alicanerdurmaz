@@ -14,10 +14,13 @@ const fs = require("fs");
 const inputDir = "./input.txt";
 const outputDir = "./output.txt";
 
-const input = fs
+const read = fs
   .readFileSync(inputDir)
   .toString()
   .split("\n");
+
+// remove unwanted blank lines
+const input = read.filter(row => row !== "");
 
 const answers = input[1].split(",");
 const numberOfQuestions = input[0];
@@ -35,12 +38,16 @@ studentsData.forEach(student => {
       score -= 1;
     }
   }
+  if (score < 0) {
+    score = 0;
+  }
   students[student[0]] = score;
   return {};
 });
 
 const arithmetics = calculateArithmetics(students);
 const result = `${toTxt(students)}${arithmetics.toString()}`;
+
 fs.writeFileSync(outputDir, result);
 
 function calculateArithmetics(obj) {
